@@ -14,7 +14,7 @@ from keras.preprocessing import image
 import edgeimpulse as ei
 
 # server address = {IP_ADDRESS}:{PORT}
-server_address = "0.0.0.0:5050"
+server_address = "192.168.0.225:6000"
 
 # this variable determines if model profiling and deployment with Edge Impulse will be done
 profile_and_deploy_model_with_EI = False
@@ -34,7 +34,7 @@ number_of_classes = len(classes)
 # a larger one means more data goes to the model(good thing) but processing time and model size will increase
 IMAGE_SIZE = (160, 160)
 
-federatedLearningcounts = 6
+federatedLearningcounts = 2
 local_client_epochs = 20
 local_client_batch_size = 8
 

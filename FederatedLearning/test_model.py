@@ -5,23 +5,23 @@ import numpy as np
 from keras.preprocessing import image
 
 # list with the classes for the image classification
-classes = ["head", "hardhat"]
+classes = ["dog", "cat"]
 class_labels = {classes: i for i, classes in enumerate(classes)}
 number_of_classes = len(classes)
 IMAGE_SIZE = (160, 160)
 
 # load a local model from the saved_models directory
 #model = tf.keras.models.load_model('saved_models/mobilenetv2.h5')
-model = tf.keras.models.load_model('saved_models/mobilenetv2')
+model = tf.keras.models.load_model('saved_models/efficientnetb0')
 #model.summary()
 
 # test the model by giving it an image and get its prediction
-test_image_head_path = "datasets/dataset_test/-.27iko294.ingestion-c484b64b9-xcl5w.jpg"
+test_image_head_path = "datasets/dataset_test/cat_553.jpg"
 test_image_head = cv2.imread(test_image_head_path)
 test_image_head = cv2.cvtColor(test_image_head, cv2.COLOR_BGR2RGB)
 test_image_head = cv2.resize(test_image_head, IMAGE_SIZE)
 
-test_image_hardhat_path = "datasets/dataset_test/-.27ikobka.ingestion-c484b64b9-gnk8v.jpg"
+test_image_hardhat_path = "datasets/dataset_test/dog_566.jpg"
 test_image_hardhat = cv2.imread(test_image_hardhat_path)
 test_image_hardhat = cv2.cvtColor(test_image_hardhat, cv2.COLOR_BGR2RGB)
 test_image_hardhat = cv2.resize(test_image_hardhat, IMAGE_SIZE)

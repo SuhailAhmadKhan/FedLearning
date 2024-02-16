@@ -12,7 +12,7 @@ from sklearn.utils import shuffle
 from keras.preprocessing import image
 
 # server address = {IP_ADDRESS}:{PORT}
-server_address = "127.0.0.1:5050"
+server_address = "192.168.147.225:10000"
 
 classes = ["dog", "cat"]
 class_labels = {classes: i for i, classes in enumerate(classes)}
